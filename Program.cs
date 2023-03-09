@@ -107,5 +107,34 @@ namespace Calculator
             }
             Console.WriteLine($" are {result}.");
         }
+        /// <summary>
+        /// Calculate the difference from some integer values
+        /// </summary>
+        static void Subtraction()
+        {
+            // Show a header for the subtraction function
+            ShowAHeader("Subtraction");
+
+            // Variables for calculation of the difference
+            int result = 0;
+            int[] numbers = GetSomeInteger();
+
+            // Calculate the difference and show the result in console window
+            Console.Write("The difference from ");
+            for(int x = 0; x < numbers.Length; x++)
+            {
+                // Check if the number are the first number then set or reduce the result with numbers[x] value
+                if(x == 0)
+                    result = numbers[x];
+                else
+                    result -= numbers[x];
+
+                // Show the number that set or reduce the result
+                Console.Write(numbers[x]);
+                if (x != numbers.Length - 1)
+                    Console.Write(", ");
+            }
+            Console.WriteLine($" are {result}.");
+        }
     }
 }
