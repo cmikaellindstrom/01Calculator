@@ -22,6 +22,39 @@ namespace Calculator
             // Make a pause in the program
             Console.ReadKey();
         }
+        /// <summary>
+        /// Show the menu of this program and wait for user has make their choise
+        /// </summary>
+        /// <returns>The user choise</returns>
+        static string Menu()
+        {
+            // Create a empty console window and show the name of this program
+            Console.Clear();
+            Console.WriteLine(ProgramName);
+
+            // Create a empty row
+            Console.WriteLine();
+
+            // Show a menu header
+            ShowAHeader("Menu");
+
+            // Create a empty row
+            Console.WriteLine();
+
+            // Show the menu ifself
+            Console.WriteLine("1. Addition");
+            Console.WriteLine("2. Subtraction");
+            Console.WriteLine("3. Divsion");
+            Console.WriteLine("4. Multiplication");
+            Console.WriteLine("99. End of this program");
+
+            // Create a empty row
+            Console.WriteLine();
+
+            // Ask the user about their choise
+            Console.Write("Make your choise: ");
+            return Console.ReadLine();
+        }
 
         /// <summary>
         /// Show a header 
