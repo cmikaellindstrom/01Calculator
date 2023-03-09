@@ -136,5 +136,29 @@ namespace Calculator
             }
             Console.WriteLine($" are {result}.");
         }
+        /// <summary>
+        /// Calculate the qouta from two integer values
+        /// </summary>
+        static void Division()
+        {
+            // Show the header for division function
+            ShowAHeader("Division");
+
+            // Variables for calculation of the qouta
+            int a, b;
+
+            // Ask the user about two integer values
+            Console.Write("Write a number: ");
+            int.TryParse(Console.ReadLine(), out a);
+
+            Console.Write("Write a other number and didn't allowed be zero: ");
+            int.TryParse(Console.ReadLine(), out b);
+
+            // Check if the secord number are zero or not
+            if (b == 0)
+                Console.WriteLine("The secord number are zero and don't allowed be zero.");
+            else
+                Console.WriteLine($"The qouta of {a} and {b} are {a/b}.");
+        }
     }
 }
