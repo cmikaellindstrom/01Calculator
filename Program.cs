@@ -80,5 +80,32 @@ namespace Calculator
             result = Array.ConvertAll(numbers.Split(","),int.Parse);
             return result;
         }
+
+        /// <summary>
+        /// Calculate the sum from some integer values
+        /// </summary>
+        static void Addition()
+        {
+            // Show a header for the addition function
+            ShowAHeader("Addition");
+
+            // Variables for calculation of the sum
+            int result = 0;
+            int[] numbers = GetSomeInteger();
+
+            // Calculate the sum and show the result in console window
+            Console.Write("The sum from ");
+            for(int x = 0; x < numbers.Length; x++) 
+            {
+                // Add value to the result
+                result += numbers[x];
+
+                // Show the number that added to result
+                Console.Write(numbers[x]);
+                if (x != numbers.Length - 1)
+                    Console.Write(", ");
+            }
+            Console.WriteLine($" are {result}.");
+        }
     }
 }
