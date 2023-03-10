@@ -160,5 +160,26 @@ namespace Calculator
             else
                 Console.WriteLine($"The qouta of {a} and {b} are {a/b}.");
         }
+        /// <summary>
+        /// Calculate the product of two integer values
+        /// </summary>
+        static void Multiplication()
+        {
+            // Show the header of the multiplication function
+            ShowAHeader("Multiplication");
+
+            // Variables for calculation of the product
+            int a, b;
+
+            // Ask the user about two integer values
+            Console.Write("Write a number: ");
+            int.TryParse(Console.ReadLine(), out a);
+
+            Console.Write("Write a ohter number:");
+            int.TryParse(Console.ReadLine(), out b);
+
+            // Calculate the product and show the result in console window
+            Console.WriteLine($"The product of {a} and {b} are {a * b}.");
+        }
     }
 }
