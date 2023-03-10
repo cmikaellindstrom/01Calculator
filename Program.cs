@@ -16,11 +16,43 @@ namespace Calculator
         /// <param name="args">Anything</param>
         static void Main(string[] args)
         {
+            // Variable for user chosie
+            int choise;
+
             // Welcome the user to this program
             Console.WriteLine($"Welcome to {ProgramName}!");
 
-            // Make a pause in the program
-            Console.ReadKey();
+            do
+            {
+                int.TryParse(Menu(), out choise);
+
+                // Check if the user choise to end the program or not
+                if(choise != 99)
+                { 
+                    // Do that the user choise to do
+                    switch(choise)
+                    {
+                        case 1:
+                            Addition();
+                            break;
+                        case 2:
+                            Subtraction(); 
+                            break;
+                        case 3:
+                            Division();
+                            break;
+                        case 4:
+                            Multiplication();
+                            break;
+                        default:
+                            break;
+                    }
+                    
+                    // Make a pause in the program
+                    Console.ReadKey();
+                }
+            } while (choise != 99);
+            
         }
         /// <summary>
         /// Show the menu of this program and wait for user has make their choise
